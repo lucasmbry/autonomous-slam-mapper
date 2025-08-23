@@ -39,8 +39,11 @@ while True:
         print("Can't receive frame (stream end?). Exiting ...")
         break
 
+    
     faces = detect_faces(frame)
 
+    cv2.namedWindow("Face Detection", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("Face Detection", 640, 480)
     cv2.imshow("Face Detection", faces)
 
     if cv2.waitKey(1) == ord('q'):

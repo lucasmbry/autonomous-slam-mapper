@@ -27,7 +27,9 @@ while True:
         print("Can't receive frame (stream end?). Exiting ...")
         break
 
-    cv2.imshow("Video Stream", frame)
+    cv2.namedWindow("Camera", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("Camera", 640, 480)
+    cv2.imshow("Camera", frame)
 
     if cv2.waitKey(1) == ord('q'):
         break
