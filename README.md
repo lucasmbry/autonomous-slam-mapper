@@ -5,6 +5,7 @@ As part of a recent interest in computer vision and 3D scene recreation I am wor
 
 ![](https://geps.dev/progress/30)
 
+ - [ ] Reinstall Depth-AnythingV2
  - [x] Implement MDE model. (Currently DepthAnythingV2)
  - [ ] Real time implementation on host.
      - [ ] Parse depth cloud to ROS.
