@@ -1,0 +1,29 @@
+import numpy as np
+import cv2 as cv
+ 
+cap = cv.VideoCapture(0)
+if not cap.isOpened():
+    print("Cannot open camera")
+    exit()
+while True:
+    # Capture frame-by-frame
+    ret, frame = cap.read()
+ 
+    # if frame is read correctly ret is True
+    if not ret:
+        print("Can't receive frame (stream end?). Exiting ...")
+        break
+    
+
+    cv.line(frame,(0,0),(511,511),(255,0,0),5)
+
+    font = cv.FONT_HERSHEY_SIMPLEX
+    cv.putText(frame,'test',(10,100), font, 4,(255,255,255),2,cv.LINE_AA)
+    
+    cv.imshow("Frame", frame)
+    if cv.waitKey(1) == ord('q'):
+        break
+ 
+# When everything done, release the capture
+cap.release()
+cv.destroyAllWindows()
