@@ -2,6 +2,10 @@ import cv2
 import torch
 import time
 import numpy as np
+import sys
+
+# Add parent directory of depth_anything_v2 to sys.path
+sys.path.append("/home/lucas/Projects/autonomous-slam-mapper/DepthAnything/Depth-Anything-V2")
 
 from depth_anything_v2.dpt import DepthAnythingV2
 

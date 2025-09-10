@@ -2,7 +2,9 @@ import cv2
 import torch
 import numpy as np
 import time
+import sys
 
+sys.path.append("/home/lucas/Projects/autonomous-slam-mapper/DepthAnything/Depth-Anything-V2/metric_depth")
 from depth_anything_v2.dpt import DepthAnythingV2
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu" # 'mps' if torch.backends.mps.is_available() else 'cpu'
