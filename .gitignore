@@ -1,3 +1,5 @@
 # Ignore local cloned repos
 DepthAnything/Depth-Anything-V2/
+DepthAnything/DepthVenv/
 RTMonoDepth/RT-MonoDepth/
+Open3D
