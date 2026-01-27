@@ -6,11 +6,14 @@ As part of a recent interest in computer vision and 3D scene recreation I am wor
 ![](https://geps.dev/progress/30)
 
  - [x] Implement MDE model. (Currently DepthAnythingV2)
- - [ ] Real time implementation on host.
+ - [x] Real time implementation on host.
      - [ ] Parse depth cloud to ROS.
- - [x] Develop simple remotely controlled car.
+ - [ ] Develop simple remotely controlled car.
  - [x] Send live camera footage to host computer.
-     - [ ] Reduce camera latency using GStreamer
+     - [x] Reduce camera latency using GStreamer.
+ - [ ] Planar estimation for ground plane
+ - [ ] Iterate to find depth
  - [ ] Positional feedback via encoders to ROS.
 
  - [ ] TBD...
+
