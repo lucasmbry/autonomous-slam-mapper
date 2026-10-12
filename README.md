@@ -1,19 +1,20 @@
-# Autonomous monocular SLAM mapper
-As part of a recent interest in computer vision and 3D scene recreation I am working on implementing an MDE model onto a remotely controlled vehicle to map spaces with ROS.
+# Autonomous Monocular SLAM Depth Mapper
 
-## Current progress
+Real-time spatial mapping and 3D scene reconstruction pipeline using monocular depth estimation (MDE), low-latency video streaming from a robotic car
 
-![](https://geps.dev/progress/30)
+---
 
- - [x] Implement MDE model. (Currently DepthAnythingV2)
- - [x] Real time implementation on host.
-     - [ ] Parse depth cloud to ROS.
- - [ ] Develop simple remotely controlled car.
- - [x] Send live camera footage to host computer.
-     - [x] Reduce camera latency using GStreamer.
- - [ ] Planar estimation for ground plane
- - [ ] Iterate to find depth
- - [ ] Positional feedback via encoders to ROS.
+### Overview
 
- - [ ] TBD...
+* **Objective:** 3D point cloud generation and spatial mapping from a single monocular camera feed
+* **Architecture:** Video streaming via an RC platform offloaded to my laptop running neural depth estimation and ROS slam node
 
+---
+
+### Key Features
+
+* **Monocular Depth Estimation:** Uses **Depth Anything V2** to infer dense metric depth maps from single-frame RGB feeds
+* **Low-Latency Streaming:** Hardware-accelerated **GStreamer** pipeline streaming camera frames from vehicle to host
+* **Point Cloud Generation:** Converts RGB-D data into dense 3D point clouds (`sensor_msgs/PointCloud2`) in real time.
+* **Ground Plane Segmentation:** Planar estimation algorithms to detect and isolate the ground reference plane
+* **Odometry & Sensor Fusion:** Wheel encoder feedback integrated into ROS for odometry tracking and drift reduction
